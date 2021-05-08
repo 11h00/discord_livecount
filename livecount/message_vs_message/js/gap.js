@@ -9,13 +9,13 @@ var post1 = 0;
 var sonHD = true;
 var post2 = 0;
 let prifle1;
-let useuname1 = "alex bans";
-let useuname2 = "mathias bans"
+let useuname1 = "alex messages";
+let useuname2 = "mathias messages"
 VS.onreadystatechange = function (event) {
 	if (this.readyState === XMLHttpRequest.DONE) {
 		if (this.status === 200) {
 			degar2 = JSON.parse(VS.responseText); //gen 2
-			post2 = degar2.ban_count
+			post2 = degar2.message_count
 			oldcount = vsresult
 			conmapere()
 			odometer3.innerHTML = post2;
@@ -27,10 +27,10 @@ CULER.onreadystatechange = function (event) {
 	if (this.readyState === XMLHttpRequest.DONE) {
 		if (this.status === 200) {
 			degar = JSON.parse(CULER.responseText);
-			post1 = degar.ban_count;
+			post1 = degar.message_count;
 			//prifle1 = "img/alex.jpg";
 		}
-		VS.open('GET', "get_ban_mathias.php");
+		VS.open('GET', "get_message_mathias.php");
 		VS.send();
 	}
 };
@@ -74,9 +74,9 @@ function testcount() {
 
 function tg() {
 	setTimeout(function () {
-		CULER.open('GET', "get_ban_alex.php");
+		CULER.open('GET', "get_message_alex.php");
 		CULER.send(null);
-		updatecount = 15000;
+		updatecount = 5000;
 		tg();
 	}, updatecount)
 }
