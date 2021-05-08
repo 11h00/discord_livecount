@@ -1,5 +1,5 @@
 <?php
-$request = curl_init("https://discord.com/api/v9/guilds/840573478229901332/messages/search?channel_id=840575022586134569");
+$request = curl_init("https://discord.com/api/v9/guilds/840573478229901332/messages/search?channel_id=840588593046224907");
 $header = array();
 $header[] = "authorization: ODQwNTc1MDU0NjUwODAyMjA2.YJaMrw.1q_7efKWBmbdCuCazKFCh8U-hEg";
 $header[] = "cookie: __cfduid=d51087ef0bc6861bd4e1b63fecf7f67751620479094; __dcfduid=7467b79484e347b820d124c4ecb07ffb; locale=fr";
@@ -8,8 +8,7 @@ $header[] = "x-super-properties: eyJvcyI6IldpbmRvd3MiLCJicm93c2VyIjoiQ2hyb21lIiw
 curl_setopt($request, CURLOPT_HTTPHEADER, $header);
 curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($request);
-print_r($result);
-exit;
+
 $count = json_decode($result);
 $savecount =  $count->total_results;
 echo json_encode(["message_count" => $savecount]);
