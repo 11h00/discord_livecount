@@ -10,5 +10,5 @@ curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($request);
 $count = json_decode($result);
 $savecount =  $count->total_results;
-echo json_encode(["message_count" => $savecount - 2345]);
+echo json_encode(["message_count" => $savecount - 6245]);
 ?>
