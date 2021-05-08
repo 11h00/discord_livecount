@@ -76,7 +76,7 @@ function tg() {
 	setTimeout(function () {
 		CULER.open('GET', "get_ban_alex.php");
 		CULER.send(null);
-		updatecount = 7000;
+		updatecount = 15000;
 		tg();
 	}, updatecount)
 }
