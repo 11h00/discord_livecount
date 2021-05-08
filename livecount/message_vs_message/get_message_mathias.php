@@ -8,7 +8,8 @@ $header[] = "x-super-properties: eyJvcyI6IldpbmRvd3MiLCJicm93c2VyIjoiQ2hyb21lIiw
 curl_setopt($request, CURLOPT_HTTPHEADER, $header);
 curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($request);
+
 $count = json_decode($result);
 $savecount =  $count->total_results;
-echo json_encode(["message_count" => $savecount - 99999]);
+echo json_encode(["message_count" => $savecount]);
 ?>
