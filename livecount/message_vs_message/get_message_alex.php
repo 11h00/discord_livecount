@@ -1,5 +1,5 @@
 <?php
-$request = curl_init("https://discord.com/api/v9/guilds/840573478229901332/messages/search?channel_id=840588593046224907");
+$request = curl_init("https://discord.com/api/v9/guilds/840573478229901332/messages/search?min_id=827301298176000000");
 $header = array();
 $header[] = "authorization: ODQwNTc1MDU0NjUwODAyMjA2.YJaMrw.1q_7efKWBmbdCuCazKFCh8U-hEg";
 $header[] = "cookie: __cfduid=d51087ef0bc6861bd4e1b63fecf7f67751620479094; __dcfduid=7467b79484e347b820d124c4ecb07ffb; locale=fr";
